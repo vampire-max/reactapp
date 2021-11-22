@@ -1,16 +1,19 @@
+import { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/header';
+import Modal from './components/modal';
 import Search from './components/search';
-import google from './images/googlelogo.png';
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // const Toggle = () => setIsModalOen(!isModalOpen);
+
   return (
     <div className="App">
-      <Header />
-      <div className="img-wrapper">
-        <img alt="Google" height="92" src={google}  width="272" data-iml="1637312839822" data-atf="1" data-frt="0" />
-      </div>
+      <Header setIsModalOpen={setIsModalOpen} />
       <Search />
+      <Modal isModalOpen={isModalOpen} />
     </div>
   );
 }

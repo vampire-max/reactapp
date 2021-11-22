@@ -1,0 +1,103 @@
+@import url('http:/fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.modal-position {
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 328px;
+  margin-top: 57px;
+  transition: height 0.3s ease-in-out 0s;
+  margin-right: 4px;
+  max-height: calc(-63px + 100vh);
+}
+
+.modal-hidden {
+  display: none;
+}
+
+.modal-show {
+  height: 448px;
+}
+
+.modal {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px 0px rgb(60 63 67 / 30%), 0px 2px 6px 2px rgb(60 64 67 / 15%);
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 3px 6px 9px;
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+}
+
+.modal-list {
+  padding-top: 10px;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0 0 0 14px;
+  width: 300px;
+}
+
+.modal-list li {
+  display: inline-block;
+  height: 84px;
+  list-style-type: none;
+  padding: 6px;
+  position: relative;
+  transition: transform .2s cubic-bezier(.333, 0, 0, 1);
+  vertical-align: top;
+  width: 84px;
+}
+
+.modal-list a {
+  border-radius: 8px;
+  margin: 0;
+  outline: none;
+  /* position: absolute; */
+  text-align: center;
+  text-decoration: none;
+  width: 84px;
+}
+
+.modal-list a:hover {
+  background-color: #e8f0fe;
+  border: none;
+  border-radius: 8px;
+  margin: 0;
+  z-index: 1;
+}
+
+.icon-thumb-wrapper {
+  height: 62px;
+  transform: scale(calc(5/6));
+}
+
+.icon-thumb {
+  background-image: url(../images/icon.png);
+  background-size: 64px 3100px;
+  display: inline-block;
+  height: 64px;
+  vertical-align: top;
+  width: 64px;
+}
+
+.icon-desc {
+  color: #202124;
+  display: inline-block;
+  font-family: 'Roboto';
+  font-size: 14px;
+  letter-spacing: 0.09px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 76px;
+}
+
+.modal-list a:hover .icon-desc {
+  background-color: #e8f0fe;
+  text-decoration: none;
+  white-space: normal;
+  word-wrap: break-word;
+}
