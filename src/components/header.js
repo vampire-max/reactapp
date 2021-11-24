@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useHistory } from "react-router-dom";
 import '../styles/Header.css';
 
 const Header = ({setIsModalOpen}) => {
+  const history = useHistory();
+  const handleOnClick = useCallback(() =>history.push('/signin'), [history]);
+
   return (
     <div className="header">
       <div className="right-items">
@@ -18,7 +22,7 @@ const Header = ({setIsModalOpen}) => {
               </a>
             </div>
           </span>
-          <a className="signIn" href="https://accounts.google.com/ServiceLogin?hl=en&amp;passive=true&amp;continue=https://www.google.com/&amp;ec=GAZAmgQ" target="_top">Sign in</a>
+          <a className="signIn" onClick={handleOnClick} target="_top">Sign in</a>
         </div>
       </div>
     </div>
