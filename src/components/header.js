@@ -1,10 +1,12 @@
 import React, { useCallback } from 'react';
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import '../styles/Header.css';
 
 const Header = ({setIsModalOpen}) => {
-  const history = useHistory();
-  const handleOnClick = useCallback(() =>history.push('/signin'), [history]);
+  let navigate  = useNavigate();
+  const handleOnClick = () => {
+    navigate('/signin')
+  };
 
   return (
     <div className="header">

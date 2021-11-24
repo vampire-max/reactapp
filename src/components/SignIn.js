@@ -1,6 +1,7 @@
 import { TextField } from '@material-ui/core';
 import React from 'react';
 import '../styles/signIn.css'
+import { Input } from '../components/Input';
 
 const SignIn = () => {
   return (
@@ -24,7 +25,14 @@ const SignIn = () => {
                 <div className="margin-40 border">
                   <div>
                     <form className="form" noValidate autoComplete="off">
-                      {/* <TextField variant="Outlined" placeholder="Email or phone" /> */}
+                      <div className="email-input-wrapper">
+                        <div>
+                          <Input 
+                            label={"Email or phone"}
+                          />
+                        </div>
+                        <div className=""></div>
+                      </div>
                       <div className="forget-eamil">
                         <button type="button">Forget eamil?</button>
                       </div>
@@ -51,7 +59,7 @@ const SignIn = () => {
         </div>
         <footer className="footer">
           <div className="language"></div>
-          <ul className="">
+          <ul>
             <li><a href="https://support.google.com/accounts?hl=id" target="_blank">Help</a></li>
             <li><a href="https://accounts.google.com/TOS?loc=CN&amp;hl=id&amp;privacy=true" target="_blank">Privacy</a></li>
             <li><a href="https://accounts.google.com/TOS?loc=CN&amp;hl=id" target="_blank">Terms</a></li>
