@@ -1,7 +1,7 @@
-import { TextField } from '@material-ui/core';
 import React from 'react';
-import '../styles/signIn.css'
-import { Input } from '../components/Input';
+import '../styles/signIn.css';
+import Input from '../components/Input';
+import Select from './select';
 
 const SignIn = () => {
   return (
@@ -29,6 +29,8 @@ const SignIn = () => {
                         <div>
                           <Input 
                             label={"Email or phone"}
+                            required
+
                           />
                         </div>
                         <div className=""></div>
@@ -58,7 +60,9 @@ const SignIn = () => {
           </div>
         </div>
         <footer className="footer">
-          <div className="language"></div>
+          <div className="select">
+            <Select />
+          </div>
           <ul>
             <li><a href="https://support.google.com/accounts?hl=id" target="_blank">Help</a></li>
             <li><a href="https://accounts.google.com/TOS?loc=CN&amp;hl=id&amp;privacy=true" target="_blank">Privacy</a></li>

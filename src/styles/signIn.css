@@ -280,7 +280,6 @@ ul a {
 .email-input-wrapper {
   height: 56px;
   text-align: left;
-  align-items: center;
   position: static;
   top: 0;
   display: flex;
@@ -297,14 +296,54 @@ ul a {
   height: 28px;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
 }
 
 .input-label {
-
+  z-index: 100;
+  position: relative;
+  box-sizing: border-box;
+  top: 17px;
+  left: 17px;
 }
 
 .input-label-focus {
-  border: 2px solid #1a73e8;
-  opacity: 1;
+  z-index: 100;
+  position: relative;
+  transform-origin: 114px center;
+  background-color: white;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: #1a73e8;
+  transform: scale(0.75) translateY(-59px);
+  left: 8px;
+  bottom: 9px;
+  margin-top: -3px;
+  transition: transform 150ms cubic-bezier(0.4,0,0.2,1),opacity 150ms cubic-bezier(0.4,0,0.2,1);
 }
 
+.email-input-focus {
+  border: none;
+  border: 1px solid #1a73e8;
+  box-shadow: none;
+  background-color: transparent;
+  color: #202124;
+  font-size: 16px;
+  margin: 1px 1px 0 1px;
+  padding: 13px 15px;
+  height: 28px;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+}
+
+.select {
+  border: none;
+  box-shadow: 0;
+}
+
+.select:focus {
+  border: none;
+  box-shadow: 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%), 0px 5px 5px -3px rgb(0 0 0 / 20%);
+}

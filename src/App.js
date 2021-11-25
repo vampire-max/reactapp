@@ -6,7 +6,7 @@ import Search from './components/search';
 import SignIn from './components/SignIn';
 import { Switch, Route, BrowserRouter as Router, Routes, } from 'react-router-dom';
 
-function App() {
+const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // const Toggle = () => setIsModalOen(!isModalOpen);
