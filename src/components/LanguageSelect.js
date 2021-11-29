@@ -1,25 +1,39 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/select.css";
 
-const LANGUAGES = ["America", "Canada", "German", "Arabic French", "Filipino"];
+const LANGUAGES = [
+  "America",
+  "Canada",
+  "German",
+  "Arabic French",
+  "Filipino",
+  "English(United Kingdom)",
+  "duskara",
+  "galego",
+];
 
 const LanguageSelect = (ref) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("Select language");
-  const list = useRef();
-  const useOutsideHidden = (ref) => {
+  const selectContainer = useRef();
+  // const list = useRef();
+
+  useEffect(() => {
     const handleClickOutside = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) {
+      if (!e.path.includes(selectContainer.current)) {
         setOpen(false);
         // alert("click");
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-  };
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+    console.log(ref);
+  }, []);
 
-  useOutsideHidden(list);
   return (
-    <div className="">
+    <div className="" ref={selectContainer}>
       <button
         type="button"
         className="select-btn"
@@ -47,7 +61,7 @@ const LanguageSelect = (ref) => {
         </div>
       </button>
       <ul
-        ref={list}
+        // ref={list}
         className="FormElement_options"
         style={{ display: open ? "block" : "none" }}
         onClick={(e) => {
