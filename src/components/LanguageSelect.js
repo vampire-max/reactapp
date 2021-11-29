@@ -23,7 +23,7 @@ const LanguageSelect = () => {
       type="text" />
           <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M112 184l144 144 144-144"></path></svg>
         </button>
-      <ul className="FormElement_options" style={{display: open ? "block" : "none"}} onClick={() => setOpen(true)}>
+      <ul className="FormElement_options" style={{display: open ? "block" : "none"}} onClick={() => setOpen(false)}>
         {
           LANGUAGES.map(lang => (
             <li className="select-list"
