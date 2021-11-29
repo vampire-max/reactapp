@@ -4,7 +4,11 @@ const Input = ({ label, defaultValue, required, onChange }) => {
   const [value, setValue] = useState(defaultValue || "");
   const [focus, setFocus] = useState(!defaultValue);
   return (
-    <section className={`input-section ${focus ? "hover" : ""} ${value ? "filled" : ""}`}>
+    <section
+      className={`input-section ${focus ? "hover" : ""} ${
+        value ? "filled" : ""
+      }`}
+    >
       <label>{label}</label>
       <input
         className="email-input"
