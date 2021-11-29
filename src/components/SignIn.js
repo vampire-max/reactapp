@@ -34,8 +34,10 @@ const SignIn = () => {
                     </div>
                   </form>
                   <div className="learn-more">
-                    Not your computer? Use Guest mode to sign in privately. 
-                    <a href="https://support.google.com/chrome/answer/6130773?hl=en">Learn more</a>
+                    Not your computer? Use Guest mode to sign in privately.
+                    <a href="https://support.google.com/chrome/answer/6130773?hl=en">
+                      Learn more
+                    </a>
                   </div>
                   <div className="create">
                     <div className="flex-reverse">
@@ -65,7 +67,7 @@ const SignIn = () => {
         </footer>
       </div>
     </div>
-  )
-} 
+  );
+};
 
 export default SignIn;

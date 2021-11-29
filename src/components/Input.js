@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Input = ({ label, defaultValue, required, onChange }) => {
   const [value, setValue] = useState(defaultValue || "");
   const [focus, setFocus] = useState(!defaultValue);
-
   return (
     <section className={`input-section ${focus ? "hover" : ""} ${value ? "filled" : ""}`}>
       <label>{label}</label>
-      <input 
+      <input
         className="email-input"
         value={value}
         required={required}
@@ -18,7 +17,7 @@ const Input = ({ label, defaultValue, required, onChange }) => {
         }}
         onFocus={() => setFocus(true)}
         onBlur={() => setFocus(false)}
-      />  
+      />
     </section>
   );
 };
