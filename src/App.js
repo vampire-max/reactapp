@@ -4,7 +4,7 @@ import Header from './components/header';
 import Modal from './components/modal';
 import Search from './components/search';
 import SignIn from './components/SignIn';
-import { Switch, Route, BrowserRouter as Router, Routes, } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes, } from 'react-router-dom';
 
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

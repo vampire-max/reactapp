@@ -259,15 +259,17 @@
   height: 16.8px;
 }
 
-ul {
+.footer ul {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-ul li {
+.footer ul li {
   display: inline-block;
 }
 
-ul a {
+.footer ul a {
   border-radius: 2px;
   display: inline-block;
   margin-top: -6px;
@@ -277,73 +279,47 @@ ul a {
   font-weight: 500;
 }
 
-.email-input-wrapper {
+.input-section {
+  display: grid;
+  position: relative;
   height: 56px;
-  text-align: left;
-  position: static;
-  top: 0;
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 1;
-  width: 100%;
 }
 
-.email-input {
-  color: #202124;
-  font-size: 16px;
-  margin: 1px 1px 0 1px;
-  padding: 13px 15px;
-  height: 28px;
-  border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+.input-section label {
   position: absolute;
-  left: 0;
-}
-
-.input-label {
-  z-index: 100;
-  position: relative;
-  box-sizing: border-box;
-  top: 17px;
-  left: 17px;
-}
-
-.input-label-focus {
-  z-index: 100;
-  position: relative;
-  transform-origin: 114px center;
+  pointer-events: none;
   background-color: white;
-  padding-left: 4px;
-  padding-right: 4px;
-  color: #1a73e8;
-  transform: scale(0.75) translateY(-59px);
   left: 8px;
-  bottom: 9px;
-  margin-top: -3px;
-  transition: transform 150ms cubic-bezier(0.4,0,0.2,1),opacity 150ms cubic-bezier(0.4,0,0.2,1);
+  top: 50%;
+  padding: 0 0.25rem;
+  transform: translate(3px, -50%);
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  transition: transform 0.15s linear;
+  z-index: 10;
 }
 
-.email-input-focus {
-  border: none;
-  border: 1px solid #1a73e8;
-  box-shadow: none;
-  background-color: transparent;
-  color: #202124;
-  font-size: 16px;
-  margin: 1px 1px 0 1px;
-  padding: 13px 15px;
-  height: 28px;
+.input-section input {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  width: 90%;
+  transition: box-shadow 0.1s linear;
   border-radius: 4px;
-  position: absolute;
-  left: 0;
 }
 
-.select {
-  border: none;
-  box-shadow: 0;
+.input-section.hover label {
+  color: #1a73e8;
+  transform: translate(-0.5rem, -175%) scale(0.8);
+  background-color: white;
 }
 
-.select:focus {
-  border: none;
-  box-shadow: 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%), 0px 5px 5px -3px rgb(0 0 0 / 20%);
+.input-section.filled label {
+  color: #1a73e8;
+  transform: translate(-0.5rem, -175%) scale(0.8);
+  background-color: white;
+}
+
+.input-section input:focus {
+  box-shadow: inset 0 0 0 1px #1a73e8;
+  border-color: #1a73e8;
 }

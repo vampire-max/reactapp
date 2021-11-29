@@ -5,10 +5,10 @@ const Input = ({ label, defaultValue, required, onChange }) => {
   const [focus, setFocus] = useState(!defaultValue);
 
   return (
-    <section>
-      <label className={focus ? "input-label-focus" : "input-label"}>{label}</label>
+    <section className={`input-section ${focus ? "hover" : ""} ${value ? "filled" : ""}`}>
+      <label>{label}</label>
       <input 
-        className={focus ? "email-input-focus" : "email-input"}
+        className="email-input"
         value={value}
         required={required}
         type={"text"}
